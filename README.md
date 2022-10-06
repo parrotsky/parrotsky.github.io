@@ -1,1 +1,0 @@
-# parrotsky.github.io
