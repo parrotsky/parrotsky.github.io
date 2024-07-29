@@ -6,8 +6,6 @@ How to build a personal blog or homepage with Hugo   (Linux, Ubuntu 22.04)
 
 Run these commands to create a Hugo site with the [Ananke](https://github.com/theNewDynamic/gohugo-theme-ananke) theme. The next section provides an explanation of each command.
 
-
-
 ```bash
 hugo new site quickstart
 
@@ -57,17 +55,11 @@ Start Hugo’s development server to see your changes, remembering to include dr
 hugo server -D
 ```
 
-
-
 # 2. Publish the site
 
 ```bash
 hugo --gc --minify --baseURL "https://xxx.github.io/" 
 ```
-
-
-
-
 
 # 3. Github Page & Actions [Host and Deploy](https://gohugo.io/hosting-and-deployment/)
 
@@ -120,7 +112,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches:
-      - main
+      - master
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -211,8 +203,6 @@ git push origin main
 ```
 
 Remember to replace <xxx> to your github username.
-
-
 
 Step 8
 
