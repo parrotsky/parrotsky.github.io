@@ -1,4 +1,13 @@
-How to build a personal blog or homepage with Hugo   (Linux, Ubuntu 22.04)
++++
+author = "GoodGoodSky"
+title = "How to build a personal blog or homepage with Hugo   (Linux, Ubuntu 22.04)"
+date = "2024-07-29"
+description = "Guide to Build Homepage in Hugo"
+tags = [
+    "hugo",
+]
++++
+
 
 # 1. Quick Start [hugo](https://gohugo.io/getting-started/quick-start/)
 
