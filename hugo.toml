@@ -1,123 +1,89 @@
-baseURL = "https://parrotsky.github.io"
-theme = "hugo-bearcub"
-copyright = "GoodGoodSky"
-defaultContentLanguage = "en"
-enableRobotsTXT = true
-enableEmoji = true
-defaultContentLanguageInSubdir = true
-enableGitInfo = false
+# This is the configuration file for the example website of the Hugo theme
+# Astatine (see https://github.com/hugcis/hugo-astatine-theme).
+#
+# The URL from which the site will be served
+baseurl = "https://hugcis.github.io/hugo-astatine-theme/"
+# Language used
+languageCode = "en-us"
+# Website title
+title = "Astatine Theme"
+# Theme used
+theme = "hugo-astatine-theme"
 
-# Setup syntax highlighting without inline styles
-[markup]
-  [markup.highlight]
-    lineNos = true
-    lineNumbersInTable = false
-    noClasses = false
+preserveTaxonomyNames = true
+rssLimit = 10
+paginate = 10
 
-# Multilingual mode config
-[languages]
-  [languages.en]
-    contentDir = "content/en"
-    languageCode = "en-US"
-    languageDirection = "ltr"
-    languageName = "English"
-    title = "Yue" # Shown on the home page
-    weight = 10
-    [languages.en.menus]
-      [[languages.en.menus.main]]
-        name = "Home"
-        pageRef = "/"
-        weight = 10
-      [[languages.en.menus.main]]
-        name = "Posts"
-        pageRef = "/posts"
-        weight = 20
-      [[languages.en.menus.main]]
-        name = "Tags"
-        pageRef = "/tags"
-        weight = 30
-      [[languages.en.menus.main]]
-        name = "Categories"
-        pageRef = "/categories"
-        weight = 40
-      [[languages.en.menus.main]]
-        name = "About"
-        pageRef = "/about"
-        weight = 50
-    [languages.en.params]
-      dateFormat = "Jan 02, 2006"
-      author = "Jane Doe"
-      [languages.en.params.footer]
-        copyrightYearStart = 2023
-        copyrightYearEnd = 2024
-        author = "Jane Doe"
+# Code highlighting
+pygmentsCodefences = true
+pygmentsStyle = "native"
 
-  [languages.zh-CN]
-    hasCJKLanguage = true
-    contentDir = "content/zh-CN"
-    languageCode = "zh-CN"
-    languageDirection = "ltr"
-    languageName = "中文"
-    title = "月"
-    weight = 20
-    [languages.zh-CN.menus]
-      [[languages.zh-CN.menus.main]]
-        name = "主页"
-        pageRef = "/"
-        weight = 10
-      [[languages.zh-CN.menus.main]]
-        name = "文章"
-        pageRef = "/posts"
-        weight = 20
-      [[languages.zh-CN.menus.main]]
-        name = "标签"
-        pageRef = "/tags"
-        weight = 30
-      [[languages.zh-CN.menus.main]]
-        name = "类别"
-        pageRef = "/categories"
-        weight = 40
-      [[languages.zh-CN.menus.main]]
-        name = "关于"
-        pageRef = "/about"
-        weight = 50
-    [languages.zh-CN.params]
-      dateFormat = "2006年1月02日"
-      author = "小月"
-      [languages.zh-CN.params.footer]
-        copyrightYearStart = 2023
-        author = "小月"
+# Taxonomies (only tags and categories are supported out of the box but you can
+# add more)
+[taxonomies]
+    category = "categories"  
+    tag = "tags"
 
+# Configure permalinks style
+[permalinks]
+    post = "/:slug/"
+    page = "/:slug/"
+
+# Configure main navbar links. They can have a weight to select the order.
+# This links to content within the content/post/ folder
+[[menu.main]]
+    name = "Posts"
+    url = "/post/"
+    weight = -150
+
+# This links to the page about.md
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = -110
+
+# Make the tags and categories pages accessible directly from the navbar.
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = -120
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = -130
+
+# Site wide params and SEO
 [params]
-  # The description of your website
-  description = "Bear Cub Demo"
-  # The path to your favicon
-  favicon = "images/favicon.png"
-  # These images will show up when services want to generate a preview of a link to your site
-  images = ["images/share.webp"]
-  # This title is used as the site_name on the Hugo's internal opengraph structured data template
-  title = "Bear Cub"
-  # Dates are displayed following the format below
-  dateFormat = "2006-01-02"
-  # If your blog is multilingual but you haven't translated a page, this theme will create a disabled link
-  hideUntranslated = false
-  # CSS styles options: "original" or "herman"
-  themeStyle = "original"
-  # Generate social cards for posts without `images` defined in their front matter
-  generateSocialCard = true
-  # Social media metadata
-  [params.social]
-    twitter = "example" # Twitter handle (without '@')
-    facebook_admin = "0000000000" # Facebook Page Admin ID
-  # Author metadata
-  [params.author]
-    name = "John Doe" # Your name as shown in the RSS feed metadata
-    email = "me@example.com" # Added to the footer so readers can reply to posts
+    # Site description. Individual pages can have descriptions too but if
+    # missing it will fallback to that one.
+    description = """The homepage of Astatine. This website is a demo the of the \
+    Hugo theme Astatine."""
+    # Author of the site
+    authorName = "Jack Harkness"
+    # Main image for the author. This will be the default image for SEO.
+    [params.imgname]
+        name = "img/main.jpg"
+        # Add an alt description for the image
+        alt = "Profile picture"
 
-# Frontmatter configuration
-[frontmatter]
-  lastmod = ['lastmod', ':default'] # lastmod in front matter has highest precedence
+    # Indicate if you host Katex yourself. Defaults to using the CDN KaTex.
+    # hostedKaTex = false
 
-# Markup configuration
-[markup.goldmark.renderer]
-  unsafe = true # Allow HTML code in Markdown
+    # Optional: add a twitter handle and mastodon handle for SEO.
+    # [params.twitter]
+        # name = "@Jack_harkness"
+    # [params.mastodon]
+        # name = "@jkharkness"
+        # host = "mastodon.social"
+    
+    # Enable link to feed in footer
+    blogrss = true
+
+    # Enable pingback and webmention via webmention.io
+    # webmention = "hugocisneros.com"
+
+
+# Sitemap location (default is /sitemap.xml)
+[sitemap]
+  filename = "sitemap.xml"
