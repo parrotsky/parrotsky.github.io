@@ -1,0 +1,12 @@
+{{ define "main" }}
+    {{ partial "info.html" . }}
+    {{ with .Params.Publications }}
+        <h2 id="publications">Publications</h2>
+    {{ end }}
+    {{ range .Params.Publications }}
+        {{ partial "publication.html" . }}
+    {{ end }}
+    {{ range .Params.Publications }}
+    {{ partial "modal_publication.html" . }}
+    {{ end }}
+{{ end }}

@@ -1,0 +1,106 @@
+<div class="head container grid sm:grid-cols-2 grid-cols-1
+            justify-around flex-wrap items-center mx-auto max-w-[90%]"
+     itemscope itemtype="http://schema.org/Person">
+     <div class="picture p-8 max-w-[80%] mx-auto basis-20 grow shrink" itemscope itemtype="http://schema.org/ImageObject">
+        <picture>
+            {{ if .Params.ImgOther }}
+            {{ range .Params.ImgOther }}
+            <source srcset="{{ .name }}"{{ if .type }} type="{{ .type }}"{{ end }}>
+            {{ end }}
+            {{ end }}
+            <source srcset="{{ .Site.Params.imgname.Name }}"
+                    {{ if .Site.Params.imgname.Type }} type="{{ .Site.Params.Imgname.Type }}"{{ end }}>
+            <img class="main-image p-8 u-photo mx-auto"
+            itemprop="contentUrl" alt="{{ .Site.Params.Imgname.Alt }}"
+                 src="{{ .Site.Params.imgname.Name }}">
+        </picture>
+        <div class="py-0  social-icons-container">
+            {{ with .Site.Params.Social.Github }}
+            <a href="https://github.com/{{.}}" target="_blank" rel="me noopener"><i class="iconfont icon-github"></i></a>
+            {{ end }}
+            {{ with .Site.Params.Social.LinkedIn }}
+            <a href="https://linkedin.com/in/{{.}}" target="_blank" rel="me noopener"><i class="iconfont icon-linkedin"></i></a>
+            {{ end }}
+            {{ with .Site.Params.Social.Twitter }}
+            <a href="https://x.com/{{.}}" target="_blank" rel="me noopener"><i class="iconfont icon-twitter"></i></a>
+            {{ end }}
+            {{ with .Site.Params.Social.Wechat }}
+            <a href="javascript:void(0);" target="_blank" rel="me noopener" onclick="document.getElementById('lightbox').style.display='inline';"><i class="iconfont icon-wechat"></i></a> 
+            {{ end }}
+            {{ with .Site.Params.Social.Email }}
+            <a href="mailto:{{.}}" rel="me noopener"><i class="iconfont icon-mail01"></i></a>
+            {{ end }}
+        </div>
+    </div>
+    <div class="mx-0 mtm-0 basis-60 grow shrink-2 leading-snug text-base">
+        <a  class="u-url font-bold" rel="me" itemprop="url" href="{{ .Permalink }}">
+            <h1 class="text-neutral-200 dark:text-zinc-300 p-name border-0" itemprop="name">
+                <a href="https://scholar.google.com/citations?user=phnm-TwAAAAJ" class="flex items-center">
+                    {{ .Params.Name }}
+                    <img src="{{ .Site.Params.Social.Scholar}}" alt="Google Scholar" style="width: 28px; height: 28px; margin-left: 8px;">
+                </a>
+            </h1>
+            <!-- <h1 class="text-neutral-200 dark:text-zinc-300 p-name border-0"
+                itemprop="name">{{ .Params.Name }}
+            </h1> -->
+        </a>
+        {{ if .Params.sameas }}
+        {{ range .Params.sameas }}
+        <link href="{{ . }}" rel="me" itemprop="sameAs">
+        {{ end }}
+        {{ end }}
+        <h2 class="text-gray-800 dark:text-zinc-300 text-xl my-0 border-none">
+            <!-- itemprop="jobTitle" {{ .Params.Personal_title }} -->
+            Joint Ph.D. in 
+        </h2>
+        <h2 class="text-gray-800 dark:text-zinc-300 text-xl my-0 border-none">
+            Parallel Computing Systems for
+        </h2>
+        <h2  class="text-gray-800 dark:text-zinc-300 text-xl my-0 border-none">
+            Distributed AI Inference
+        </h2>
+        <h2 class="univ_text dark:univ_dark_text text-xl my-0 border-none">
+            <a href="https://pcs-research.nl/" class="univ_link dark:univ_dark_link">PCS, University of Amsterdam</a>
+        </h2>
+        <h2 class="univ_text dark:univ_dark_text text-xl my-0 border-none">
+            <a href="https://liacs.leidenuniv.nl/~stefanovtp/" class="univ_link dark:univ_dark_link">LIACS, Leiden University</a>
+        </h2>        
+    </div>  
+</div>
+<!-- <div class="centered-content-90">
+    My name is **Xiaotian Guo** (You can call me Sky in English). I am currently a Guest Researcher at University of Amsterdam, working closely with Prof. Andy Pimentel and Dr. Todor Stefanov. I finished my Ph.D. at Amsterdam Parallel Computing Systems Lab (PCS), University of Amsterdam. Thanks to my great Ph.D. supervisors,  Prof. Andy Pimentel and Dr. Todor Stefanov, for supporting me in finishing this project. 
+
+
+More interesting work is ongoing and please follow my updates though [Googlescholar]([‪Xiaotian Guo‬ - ‪Google Scholar‬](https://scholar.google.com/citations?user=phnm-TwAAAAJ)) (Only selected publications appear in the googlescholar). For any guys who want to achieve scientific collaboration in publishing interesting papers, feel free to contact me😎.
+     {{ .Content }} 
+</div> -->
+<div class="bio_body">
+    <h1>BIOGRAPHY</h1>
+    <p>My name is <strong>Xiaotian Guo</strong> (You can call me Sky in English). 
+        I am currently a Guest Researcher at University of Amsterdam. 
+        <!-- I finished my joint Ph.D. at Parallel Computing Systems Lab (PCS) of University of Amsterdam (UvA) and Leiden Institute of Advanced Computer Science (LIACS) -
+        Leiden University.  -->
+        Thanks to my great Ph.D. supervisors,  <a class="bio_red_text" href="https://staff.fnwi.uva.nl/a.d.pimentel/"><strong>Prof. Andy Pimentel</strong></a> and 
+        <a href="https://liacs.leidenuniv.nl/~stefanovtp/" class="bio_red_text"><strong>Dr. Todor Stefanov</strong></a>, 
+        for supporting me in finishing this Ph.D. 
+        <br>Moreover, my research focuses on the <strong class="bio_red_text"> distributed inference of deep learning models at the Edge</strong>. 
+            The principal goal of my Ph.D. project is to achieve <strong class="bio_red_text">scalable, efficient</strong>, <strong class="bio_red_text">robust</strong>, and 
+            <strong class="bio_red_text"> secure DNN execution at the Edge</strong>. 
+            <br> My PhD thesis <strong class="bio_red_text">"Distributed DNN inference at the Edge"</strong> is available 
+            in the <a href="link" class="bio_red_text">link</a>.
+    I have published <strong class="bio_blue_text">1 TCAD jouranl paper</strong>,
+            <strong class="bio_blue_text">1 IoT journal paper</strong>,
+            <strong class="bio_blue_text">1 ASP-DAC Conference paper</strong>, 
+            <strong class="bio_blue_text">1 ECML-PKDD workshop paper</strong>. </p>
+        <!-- <p>More interesting work is ongoing and please follow my updates through
+        <a href="https://scholar.google.com/citations?user=phnm-TwAAAAJ" class="bio_red_text">Googlescholar</a> 
+        (Only selected publications appear in the googlescholar). 
+        For any guys who want to achieve scientific collaboration in publishing interesting papers, 
+        feel free to contact me<span class="bio_highlight">😊</span>.</p> -->
+        <p> 😊😊😊 I am actively looking for <strong> Software Engineer or Research Scientist Positions in Industry. </strong>
+            I am also open to collaboration or postdoctoral opportunities. 😊😊😊 </p> 
+            <!-- <p>    Feel free to contact by Email (gxtzhuxi[AT]gmail[TOD]com). 
+            Details of my CV can be found in PDF.</p> -->
+</div>
+ 
+

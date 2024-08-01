@@ -6,7 +6,7 @@ baseurl = "https://hugcis.github.io/hugo-astatine-theme/"
 # Language used
 languageCode = "en-us"
 # Website title
-title = "Astatine Theme"
+title = "Enjoy AI"
 # Theme used
 theme = "hugo-astatine-theme"
 
@@ -57,10 +57,20 @@ pygmentsStyle = "native"
 [params]
     # Site description. Individual pages can have descriptions too but if
     # missing it will fallback to that one.
-    description = """The homepage of Astatine. This website is a demo the of the \
-    Hugo theme Astatine."""
+    description = """The homepage of GoodGoodSky"""
     # Author of the site
-    authorName = "Jack Harkness"
+    authorName = "Xiaotian Guo"
+    author = "Xiaotian Guo"                           # Author's name
+    avatar = "/img/main.jpg"           # Author's avatar
+    subtitle = "我会更好，因为我没有停止"         # Subtitle
+    cdn_url = ""           # Base CDN URL
+    home_mode = "" # post or other
+    google_verification = ""
+    keywords = "" # site keywords
+
+    beian = ""
+    baiduAnalytics = ""
+
     # Main image for the author. This will be the default image for SEO.
     [params.imgname]
         name = "img/main.jpg"
@@ -71,11 +81,11 @@ pygmentsStyle = "native"
     # hostedKaTex = false
 
     # Optional: add a twitter handle and mastodon handle for SEO.
-    # [params.twitter]
-        # name = "@Jack_harkness"
-    # [params.mastodon]
-        # name = "@jkharkness"
-        # host = "mastodon.social"
+    [params.twitter]
+        name = "@Jack_harkness"
+    [params.mastodon]
+        name = "@jkharkness"
+        host = "mastodon.social"
     
     # Enable link to feed in footer
     blogrss = true
@@ -83,6 +93,17 @@ pygmentsStyle = "native"
     # Enable pingback and webmention via webmention.io
     # webmention = "hugocisneros.com"
 
+[params.social]
+    GitHub = "parrotsky"
+    Twitter = "xiaotian_guo"
+    Email   = "gxtzhuxi@gmail.com"
+    Instagram = "xxoo"
+    Wechat = "img/gxtzhuxi.png"  # Wechat QRcode image
+    Facebook = "xxoo"
+    Telegram = "xxoo"
+    Dribbble = "xxoo"
+    Medium = "xxoo"
+    Scholar = "img/google-scholar.svg"
 
 # Sitemap location (default is /sitemap.xml)
 [sitemap]
