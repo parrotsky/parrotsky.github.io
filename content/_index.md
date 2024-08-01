@@ -43,14 +43,14 @@ publications:
     authors:
         - name: Xiaotian Guo
           me: true
-        - name: Quan Jiang 
-        - name: Yixian Shen 
-        - name: Andy Pimentel 
+        - name: Quan Jiang
+        - name: Yixian Shen,  
+        - name: Andy Pimentel,  
         - name: Todor Stefanov 
     title: "EASTER: learning to split transformers robustly at the Edge"
     # Will write "In ${journal}, ${date}"
     date: 2024
-    journal: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)
+    journalconference: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)
     image: img/splittransformer.svg
     # A bibtex (or any other format) citation that people can copy directly from the website.
     citation: "@article{guo2024easter,\n
@@ -76,12 +76,12 @@ publications:
         - name: Xiaotian Guo
           me: true
         - name: Quan Jiang 
-        - name: Andy Pimentel 
-        - name: Todor Stefanov 
+        - name: Andy Pimentel, 
+        - name: Todor Stefanov
     title: "RobustDiCE: Robust and Distributed CNN Inference at the Edge"
     # Will write "In ${journal}, ${date}"
     date: 2023
-    conference: Proceedings of the 29th Asia and South Pacific Design Automation Conference (ASPDAC '24)
+    journalconference: Proceedings of the 29th Asia and South Pacific Design Automation Conference (ASPDAC '24)
     image: img/robustdice.svg
     # A bibtex (or any other format) citation that people can copy directly from the website.
     citation: "@INPROCEEDINGS{guo2023robustdice,\n
@@ -113,7 +113,7 @@ publications:
     title: "Automated Exploration and Implementation of Distributed CNN Inference at the Edge"
     # Will write "In ${journal}, ${date}"
     date: 2023
-    journal:  IEEE Internet of Things Journal
+    journalconference:  IEEE Internet of Things Journal
     image: img/designflow.svg
     # A bibtex (or any other format) citation that people can copy directly from the website.
     citation: "@ARTICLE{guo2021autodice,\n
@@ -146,7 +146,7 @@ publications:
     title: "Hierarchical design space exploration for distributed CNN inference at the edge"
     # Will write "In ${journal}, ${date}"
     date: 2022
-    journal: Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2022)
+    journalconference: Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2022)
     image: img/hieworkflow.svg
     # A bibtex (or any other format) citation that people can copy directly from the website.
     citation: "@inproceedings{guo2022hierarchical,\n

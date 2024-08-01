@@ -1239,7 +1239,11 @@ blockquote p {
 .grow-0 {
   flex-grow: 0;
 }
-
+.centered-content-50 {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .centered-content-90 {
   max-width: 90%;
   margin-left: auto;
@@ -1257,7 +1261,12 @@ blockquote p {
 .basis-40 {
   flex-basis: 10rem;
 }
-
+.basis-1\/4 {
+  flex-basis: 25%;
+}
+.basis-1\/2 {
+  flex-basis: 50%;
+}
 .basis-3\/4 {
   flex-basis: 75%;
 }
